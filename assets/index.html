@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>This is the title of the webpage!</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <script type="module">
+        import init from "./main-wasm/main.js";
+        init().then(() => {
+          console.log("loaded");
+        });
+    </script>
+    <h1>Web Assembly is already here!</h1>
+  </body>
+</html>

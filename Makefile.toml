@@ -1,0 +1,24 @@
+[tasks.build-front]
+script_runner = "@shell"
+script = '''
+cargo make clean-build
+# build wasm-module
+cd wasm-module
+wasm-pack build --target web --no-typescript --out-name main -d ../build/main-wasm
+cd ..
+# remove unnecessary build artifacts
+rm ./build/repalungs-wasm/package.json
+# https://github.com/sagiegurari/shell2batch/issues/20
+rm ./build/repalungs-wasm/.gitignore
+
+# move assets to build folder
+cp assets/index.html ./build
+cp assets/main.css ./build
+'''
+
+[tasks.clean-build]
+ignore_errors = true
+script_runner = "@shell"
+script = '''
+rm -rf build || rm build
+'''

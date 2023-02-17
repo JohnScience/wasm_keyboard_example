@@ -1,0 +1,22 @@
+[package]
+name = "wasm-module"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2.84"
+wasm_keyboard = { path = "../../wasm_keyboard" }
+wasm_extra = { path = "../../wasm_extra" }
+
+[dependencies.web-sys]
+version = "0.3.4"
+features = [
+  'Document',
+  'Element',
+  'HtmlElement',
+  'Node',
+  'Window',
+]
