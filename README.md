@@ -1,4 +1,4 @@
-# Example usage of [`wasm_keyboard`]
+# Example usage of `wasm_keyboard`
 
 ## Pre-requisites
 
