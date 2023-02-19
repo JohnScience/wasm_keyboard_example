@@ -1,5 +1,11 @@
 # Example usage of `wasm_keyboard`
 
+[`wasm_keyboard`] makes handling keyboard events easier.
+
+![screenshot](https://i.imgur.com/nEKLzrN.png)
+
+The handling of the `W` key can be found [here](https://github.com/JohnScience/wasm_keyboard_example/blob/main/wasm-module/src/lib.rs#L19-L42).
+
 ## Pre-requisites
 
 - [Rust toolchain].
@@ -37,3 +43,4 @@ git clone https://github.com/JohnScience/wasm_keyboard_example
 [`wasm-pack`]: https://rustwasm.github.io/wasm-pack/installer/
 [`http-server`]: https://crates.io/crates/http-server
 [Rust toolchain]: https://www.rust-lang.org/tools/install
+[`wasm_keyboard`]: https://crates.io/
